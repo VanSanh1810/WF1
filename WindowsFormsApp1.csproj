@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93AA9D4F-A324-43C9-A177-46BA93231A6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourse.Designer.cs">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddScore.Designer.cs">
+      <DependentUpon>AddScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AVGResultByByCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVGResultByByCourse.Designer.cs">
+      <DependentUpon>AVGResultByByCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AvgScoreByCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvgScoreByCourse.Designer.cs">
+      <DependentUpon>AvgScoreByCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COURSE.cs" />
+    <Compile Include="FindWithName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindWithName.Designer.cs">
+      <DependentUpon>FindWithName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintScore.Designer.cs">
+      <DependentUpon>PrintScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadForm.Designer.cs">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCourse.Designer.cs">
+      <DependentUpon>ManageCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MY_DB.cs" />
+    <Compile Include="PrintCOURSE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintCOURSE.Designer.cs">
+      <DependentUpon>PrintCOURSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintSTUDENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintSTUDENT.Designer.cs">
+      <DependentUpon>PrintSTUDENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLSVDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveCourse.Designer.cs">
+      <DependentUpon>RemoveCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCORE.cs" />
+    <Compile Include="Statics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statics.Designer.cs">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticsResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaticsResult.Designer.cs">
+      <DependentUpon>StaticsResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT.cs" />
+    <Compile Include="StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentList.Designer.cs">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDeleteStudent.Designer.cs">
+      <DependentUpon>UpdateDeleteStudent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCourse.resx">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddScore.resx">
+      <DependentUpon>AddScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AVGResultByByCourse.resx">
+      <DependentUpon>AVGResultByByCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AvgScoreByCourse.resx">
+      <DependentUpon>AvgScoreByCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindWithName.resx">
+      <DependentUpon>FindWithName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadForm.resx">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCourse.resx">
+      <DependentUpon>ManageCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintCOURSE.resx">
+      <DependentUpon>PrintCOURSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintScore.resx">
+      <DependentUpon>PrintScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintSTUDENT.resx">
+      <DependentUpon>PrintSTUDENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveCourse.resx">
+      <DependentUpon>RemoveCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statics.resx">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaticsResult.resx">
+      <DependentUpon>StaticsResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentList.resx">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDeleteStudent.resx">
+      <DependentUpon>UpdateDeleteStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLSVDBDataSet.xsc">
+      <DependentUpon>QLSVDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet.xss">
+      <DependentUpon>QLSVDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet1.xsc">
+      <DependentUpon>QLSVDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet1.xss">
+      <DependentUpon>QLSVDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet2.xsc">
+      <DependentUpon>QLSVDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet2.xss">
+      <DependentUpon>QLSVDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet3.xsc">
+      <DependentUpon>QLSVDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet3.xss">
+      <DependentUpon>QLSVDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet4.xsc">
+      <DependentUpon>QLSVDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet4.xss">
+      <DependentUpon>QLSVDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet5.xsc">
+      <DependentUpon>QLSVDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet5.xss">
+      <DependentUpon>QLSVDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet6.xsc">
+      <DependentUpon>QLSVDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet6.xss">
+      <DependentUpon>QLSVDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet7.xsc">
+      <DependentUpon>QLSVDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet7.xss">
+      <DependentUpon>QLSVDBDataSet7.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
