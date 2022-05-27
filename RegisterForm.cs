@@ -79,5 +79,10 @@ namespace WindowsFormsApp1
                 errorProvider1.SetError(usern_tbx, null);
             }
         }
+
+        private void lklb_goback_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
+        }
     }
 }

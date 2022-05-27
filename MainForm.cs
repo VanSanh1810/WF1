@@ -94,5 +94,28 @@ namespace WindowsFormsApp1
             StaticsResult a = new StaticsResult();
             a.Show(this);
         }
+
+        private void manageStudentFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageStudentForm a = new ManageStudentForm();
+            a.Show(this);
+        }
+
+        private void removeCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveCourse a = new RemoveCourse();
+            a.Show(this);
+        }
+
+        private void removeCourseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RemoveCourse a = new RemoveCourse();
+            a.Show(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Yes;
+        }
     }
 }

@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>D:\code\XuatBaoCaoWinf\XuatBaoCaoWordBangMailMergeAspose\Dll\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=10.4.6.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.Doc.10.4.6\lib\net40\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=8.4.15.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.Doc.10.4.6\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -47,37 +56,114 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCourse.cs">
+    <Compile Include="HR\CONTACT.cs" />
+    <Compile Include="HR\EditHRProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCourse.Designer.cs">
+    <Compile Include="HR\EditHRProfile.Designer.cs">
+      <DependentUpon>EditHRProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GROUP.cs" />
+    <Compile Include="HR\DelContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\DelContact.Designer.cs">
+      <DependentUpon>DelContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\AddContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\AddContact.Designer.cs">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COURSE\AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COURSE\AddCourse.Designer.cs">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddScore.cs">
+    <Compile Include="GlobalsVars.cs" />
+    <Compile Include="HR\HR.cs" />
+    <Compile Include="HR\HRForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddScore.Designer.cs">
+    <Compile Include="HR\HRForm.Designer.cs">
+      <DependentUpon>HRForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\HRRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\HRRegister.Designer.cs">
+      <DependentUpon>HRRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportExtensionMethod.cs" />
+    <Compile Include="SCORE\AddScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCORE\AddScore.Designer.cs">
       <DependentUpon>AddScore.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudentForm.cs">
+    <Compile Include="HR\SelectContact.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentForm.Designer.cs">
+    <Compile Include="HR\SelectContact.Designer.cs">
+      <DependentUpon>SelectContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\ShowFullListContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ShowFullListContact.Designer.cs">
+      <DependentUpon>ShowFullListContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT\AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENT\AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AVGResultByByCourse.cs">
+    <Compile Include="RESULT\AVGResultByByCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AVGResultByByCourse.Designer.cs">
+    <Compile Include="RESULT\AVGResultByByCourse.Designer.cs">
       <DependentUpon>AVGResultByByCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="AvgScoreByCourse.cs">
+    <Compile Include="SCORE\AvgScoreByCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AvgScoreByCourse.Designer.cs">
+    <Compile Include="SCORE\AvgScoreByCourse.Designer.cs">
       <DependentUpon>AvgScoreByCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="COURSE.cs" />
+    <Compile Include="COURSE\COURSE.cs" />
     <Compile Include="FindWithName.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,10 +176,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintScore.cs">
+    <Compile Include="STUDENT\ManageStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintScore.Designer.cs">
+    <Compile Include="STUDENT\ManageStudentForm.Designer.cs">
+      <DependentUpon>ManageStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCORE\PrintScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCORE\PrintScore.Designer.cs">
       <DependentUpon>PrintScore.cs</DependentUpon>
     </Compile>
     <Compile Include="LoadForm.cs">
@@ -108,23 +200,23 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCourse.cs">
+    <Compile Include="COURSE\ManageCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCourse.Designer.cs">
+    <Compile Include="COURSE\ManageCourse.Designer.cs">
       <DependentUpon>ManageCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="MY_DB.cs" />
-    <Compile Include="PrintCOURSE.cs">
+    <Compile Include="COURSE\PrintCOURSE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintCOURSE.Designer.cs">
+    <Compile Include="COURSE\PrintCOURSE.Designer.cs">
       <DependentUpon>PrintCOURSE.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintSTUDENT.cs">
+    <Compile Include="STUDENT\PrintSTUDENT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintSTUDENT.Designer.cs">
+    <Compile Include="STUDENT\PrintSTUDENT.Designer.cs">
       <DependentUpon>PrintSTUDENT.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -138,6 +230,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSVDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet13.xsd</DependentUpon>
     </Compile>
     <Compile Include="QLSVDBDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -169,57 +281,88 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSVDBDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLSVDBDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSVDBDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSVDBDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveCourse.cs">
+    <Compile Include="COURSE\RemoveCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveCourse.Designer.cs">
+    <Compile Include="COURSE\RemoveCourse.Designer.cs">
       <DependentUpon>RemoveCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="SCORE.cs" />
-    <Compile Include="Statics.cs">
+    <Compile Include="SCORE\SCORE.cs" />
+    <Compile Include="STUDENT\Statics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Statics.Designer.cs">
+    <Compile Include="STUDENT\Statics.Designer.cs">
       <DependentUpon>Statics.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaticsResult.cs">
+    <Compile Include="RESULT\StaticsResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaticsResult.Designer.cs">
+    <Compile Include="RESULT\StaticsResult.Designer.cs">
       <DependentUpon>StaticsResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="STUDENT.cs" />
-    <Compile Include="StudentList.cs">
+    <Compile Include="STUDENT\STUDENT.cs" />
+    <Compile Include="STUDENT\StudentList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentList.Designer.cs">
+    <Compile Include="STUDENT\StudentList.Designer.cs">
       <DependentUpon>StudentList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateDeleteStudent.cs">
+    <Compile Include="STUDENT\UpdateDeleteStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateDeleteStudent.Designer.cs">
+    <Compile Include="STUDENT\UpdateDeleteStudent.Designer.cs">
       <DependentUpon>UpdateDeleteStudent.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCourse.resx">
+    <EmbeddedResource Include="HR\EditHRProfile.resx">
+      <DependentUpon>EditHRProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\DelContact.resx">
+      <DependentUpon>DelContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\AddContact.resx">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COURSE\AddCourse.resx">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddScore.resx">
+    <EmbeddedResource Include="HR\HRForm.resx">
+      <DependentUpon>HRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\HRRegister.resx">
+      <DependentUpon>HRRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCORE\AddScore.resx">
       <DependentUpon>AddScore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStudentForm.resx">
+    <EmbeddedResource Include="HR\SelectContact.resx">
+      <DependentUpon>SelectContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ShowFullListContact.resx">
+      <DependentUpon>ShowFullListContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENT\AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AVGResultByByCourse.resx">
+    <EmbeddedResource Include="RESULT\AVGResultByByCourse.resx">
       <DependentUpon>AVGResultByByCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AvgScoreByCourse.resx">
+    <EmbeddedResource Include="SCORE\AvgScoreByCourse.resx">
       <DependentUpon>AvgScoreByCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindWithName.resx">
@@ -234,16 +377,19 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCourse.resx">
+    <EmbeddedResource Include="COURSE\ManageCourse.resx">
       <DependentUpon>ManageCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintCOURSE.resx">
+    <EmbeddedResource Include="STUDENT\ManageStudentForm.resx">
+      <DependentUpon>ManageStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COURSE\PrintCOURSE.resx">
       <DependentUpon>PrintCOURSE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintScore.resx">
+    <EmbeddedResource Include="SCORE\PrintScore.resx">
       <DependentUpon>PrintScore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintSTUDENT.resx">
+    <EmbeddedResource Include="STUDENT\PrintSTUDENT.resx">
       <DependentUpon>PrintSTUDENT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -258,21 +404,22 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoveCourse.resx">
+    <EmbeddedResource Include="COURSE\RemoveCourse.resx">
       <DependentUpon>RemoveCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statics.resx">
+    <EmbeddedResource Include="STUDENT\Statics.resx">
       <DependentUpon>Statics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticsResult.resx">
+    <EmbeddedResource Include="RESULT\StaticsResult.resx">
       <DependentUpon>StaticsResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentList.resx">
+    <EmbeddedResource Include="STUDENT\StudentList.resx">
       <DependentUpon>StudentList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateDeleteStudent.resx">
+    <EmbeddedResource Include="STUDENT\UpdateDeleteStudent.resx">
       <DependentUpon>UpdateDeleteStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -303,6 +450,116 @@
     </None>
     <None Include="QLSVDBDataSet1.xss">
       <DependentUpon>QLSVDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet10.xsc">
+      <DependentUpon>QLSVDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet10.xss">
+      <DependentUpon>QLSVDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet11.xsc">
+      <DependentUpon>QLSVDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet11.xss">
+      <DependentUpon>QLSVDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet12.xsc">
+      <DependentUpon>QLSVDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet12.xss">
+      <DependentUpon>QLSVDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet13.xsc">
+      <DependentUpon>QLSVDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet13.xss">
+      <DependentUpon>QLSVDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet14.xsc">
+      <DependentUpon>QLSVDBDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet14.xss">
+      <DependentUpon>QLSVDBDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet15.xsc">
+      <DependentUpon>QLSVDBDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet15.xss">
+      <DependentUpon>QLSVDBDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet16.xsc">
+      <DependentUpon>QLSVDBDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet16.xss">
+      <DependentUpon>QLSVDBDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet17.xsc">
+      <DependentUpon>QLSVDBDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet17.xss">
+      <DependentUpon>QLSVDBDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet18.xsc">
+      <DependentUpon>QLSVDBDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet18.xss">
+      <DependentUpon>QLSVDBDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet19.xsc">
+      <DependentUpon>QLSVDBDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet19.xss">
+      <DependentUpon>QLSVDBDataSet19.xsd</DependentUpon>
     </None>
     <None Include="QLSVDBDataSet2.xsc">
       <DependentUpon>QLSVDBDataSet2.xsd</DependentUpon>
@@ -370,9 +627,64 @@
     <None Include="QLSVDBDataSet7.xss">
       <DependentUpon>QLSVDBDataSet7.xsd</DependentUpon>
     </None>
+    <None Include="QLSVDBDataSet8.xsc">
+      <DependentUpon>QLSVDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet8.xss">
+      <DependentUpon>QLSVDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet9.xsc">
+      <DependentUpon>QLSVDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="QLSVDBDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSVDBDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSVDBDataSet9.xss">
+      <DependentUpon>QLSVDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="WORD\Mau_Bao_Cao.doc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

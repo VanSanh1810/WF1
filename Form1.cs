@@ -21,22 +21,39 @@ namespace WindowsFormsApp1
         private void login_btn_Click(object sender, EventArgs e)
         {
             MY_DB db = new MY_DB();
+            HR hR = new HR();
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            SqlCommand command = new SqlCommand("SELECT * FROM log_in WHERE username = @User AND password = @Pass",db.getConnection);
-            command.Parameters.Add("@User", SqlDbType.VarChar).Value = usern_tbx.Text;
-            command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = pssw_txb.Text;
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-            if(table.Rows.Count > 0)
+            if (rbtn_HR.Checked)
             {
-                //MessageBox.Show("Success");
-                this.DialogResult = DialogResult.OK;
+                if (hR.CheckHRLogin(usern_tbx.Text, pssw_txb.Text))
+                {
+                    //MessageBox.Show("Success");
+                    GlobalsVars.Set_Global_HR_ID(hR.GetID(usern_tbx.Text, pssw_txb.Text));
+                    this.DialogResult = DialogResult.Yes;
+                }
+                else
+                {
+                    MessageBox.Show("Fail!");
+                }
             }
             else
             {
-                MessageBox.Show("Fail!");
+                SqlCommand command = new SqlCommand("SELECT * FROM log_in WHERE username = @User AND password = @Pass", db.getConnection);
+                command.Parameters.Add("@User", SqlDbType.VarChar).Value = usern_tbx.Text;
+                command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = pssw_txb.Text;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    //MessageBox.Show("Success");
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Fail!");
+                }
             }
         }
 
@@ -47,9 +64,34 @@ namespace WindowsFormsApp1
 
         private void Register_btn_Click(object sender, EventArgs e)
         {
-            RegisterForm a = new RegisterForm();
-            this.Show();
-            a.Show();
+            if (rbtn_HR.Checked)
+            {
+                HRRegister a = new HRRegister();
+                this.Show();
+                a.Show();
+            }
+            else
+            {
+                RegisterForm a = new RegisterForm();
+                this.Show();
+                a.Show();
+            }
+        }
+
+        private void usern_tbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                login_btn_Click(sender,e);
+            }
+        }
+
+        private void pssw_txb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                login_btn_Click(sender, e);
+            }
         }
     }
 }

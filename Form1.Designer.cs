@@ -36,6 +36,9 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Register_btn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.rbtn_student = new System.Windows.Forms.RadioButton();
+            this.rbtn_HR = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // usern_tbx
@@ -44,6 +47,7 @@ namespace WindowsFormsApp1
             this.usern_tbx.Name = "usern_tbx";
             this.usern_tbx.Size = new System.Drawing.Size(169, 20);
             this.usern_tbx.TabIndex = 0;
+            this.usern_tbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usern_tbx_KeyPress);
             // 
             // pssw_txb
             // 
@@ -52,61 +56,102 @@ namespace WindowsFormsApp1
             this.pssw_txb.PasswordChar = '*';
             this.pssw_txb.Size = new System.Drawing.Size(169, 20);
             this.pssw_txb.TabIndex = 1;
+            this.pssw_txb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pssw_txb_KeyPress);
             // 
             // login_btn
             // 
+            this.login_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.login_btn.Location = new System.Drawing.Point(80, 200);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(53, 42);
             this.login_btn.TabIndex = 2;
             this.login_btn.Text = "Login";
-            this.login_btn.UseVisualStyleBackColor = true;
+            this.login_btn.UseVisualStyleBackColor = false;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // cancel_btn
             // 
+            this.cancel_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.cancel_btn.Location = new System.Drawing.Point(150, 200);
             this.cancel_btn.Name = "cancel_btn";
             this.cancel_btn.Size = new System.Drawing.Size(53, 42);
             this.cancel_btn.TabIndex = 3;
             this.cancel_btn.Text = "Cancel";
-            this.cancel_btn.UseVisualStyleBackColor = true;
+            this.cancel_btn.UseVisualStyleBackColor = false;
             this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
             // Register_btn
             // 
+            this.Register_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Register_btn.Location = new System.Drawing.Point(222, 200);
             this.Register_btn.Name = "Register_btn";
             this.Register_btn.Size = new System.Drawing.Size(65, 42);
             this.Register_btn.TabIndex = 6;
             this.Register_btn.Text = "Register";
-            this.Register_btn.UseVisualStyleBackColor = true;
+            this.Register_btn.UseVisualStyleBackColor = false;
             this.Register_btn.Click += new System.EventHandler(this.Register_btn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(92, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 39);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "User Login";
+            // 
+            // rbtn_student
+            // 
+            this.rbtn_student.AutoSize = true;
+            this.rbtn_student.Checked = true;
+            this.rbtn_student.Location = new System.Drawing.Point(80, 164);
+            this.rbtn_student.Name = "rbtn_student";
+            this.rbtn_student.Size = new System.Drawing.Size(62, 17);
+            this.rbtn_student.TabIndex = 8;
+            this.rbtn_student.TabStop = true;
+            this.rbtn_student.Text = "Student";
+            this.rbtn_student.UseVisualStyleBackColor = true;
+            // 
+            // rbtn_HR
+            // 
+            this.rbtn_HR.AutoSize = true;
+            this.rbtn_HR.Location = new System.Drawing.Point(171, 164);
+            this.rbtn_HR.Name = "rbtn_HR";
+            this.rbtn_HR.Size = new System.Drawing.Size(107, 17);
+            this.rbtn_HR.TabIndex = 9;
+            this.rbtn_HR.Text = "Human Resourse";
+            this.rbtn_HR.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(341, 307);
+            this.Controls.Add(this.rbtn_HR);
+            this.Controls.Add(this.rbtn_student);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Register_btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -130,6 +175,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Register_btn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton rbtn_student;
+        private System.Windows.Forms.RadioButton rbtn_HR;
     }
 }
 
