@@ -127,6 +127,12 @@
       <DependentUpon>QLSVDBDataSet19.xsd</DependentUpon>
     </Compile>
     <Compile Include="ReportExtensionMethod.cs" />
+    <Compile Include="ResetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPass.Designer.cs">
+      <DependentUpon>ResetPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="SCORE\AddScore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,13 @@
     </Compile>
     <Compile Include="HR\ShowFullListContact.Designer.cs">
       <DependentUpon>ShowFullListContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendCode.cs" />
+    <Compile Include="SendCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendCodeForm.Designer.cs">
+      <DependentUpon>SendCodeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="STUDENT\AddStudentForm.cs">
       <SubType>Form</SubType>
@@ -347,6 +360,9 @@
     <EmbeddedResource Include="HR\HRRegister.resx">
       <DependentUpon>HRRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ResetPass.resx">
+      <DependentUpon>ResetPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SCORE\AddScore.resx">
       <DependentUpon>AddScore.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HR\ShowFullListContact.resx">
       <DependentUpon>ShowFullListContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendCodeForm.resx">
+      <DependentUpon>SendCodeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="STUDENT\AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
@@ -656,6 +675,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+    <Folder Include="FG_pass\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

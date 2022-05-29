@@ -55,6 +55,8 @@ namespace WindowsFormsApp1
                     if (CR.AddCourse(Convert.ToInt32(textBox1.Text), textBox2.Text, decimal.ToInt32(numericUpDown1.Value), textBox4.Text))
                     {
                         ID_err.Clear();
+                        MessageBox.Show("Success !");
+                        this.Close();
                     }
                     else
                     {
@@ -96,6 +98,7 @@ namespace WindowsFormsApp1
             if (CR.EditCourse(Convert.ToInt32(textBox1.Text), textBox2.Text, decimal.ToInt32(numericUpDown1.Value), textBox4.Text))
             {
                 edit_err.Clear();
+                MessageBox.Show("Success !");
             }
             else
             {
@@ -108,6 +111,7 @@ namespace WindowsFormsApp1
             if (CR.RemoveCourse(Convert.ToInt32(textBox1.Text)))
             {
                 MessageBox.Show("Ok");
+                this.Close();
             }
             else
             {

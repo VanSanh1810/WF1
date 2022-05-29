@@ -93,5 +93,20 @@ namespace WindowsFormsApp1
                 login_btn_Click(sender, e);
             }
         }
+
+        private void llb_forgotpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(usern_tbx.Text == "")
+            {
+                MessageBox.Show("Nhập username");
+            }
+            else
+            {
+                GlobalsVars.Set_Global_UserNameFG_ID(usern_tbx.Text);
+                GlobalsVars.Set_Global_FGPass_Type((rbtn_HR.Checked) ? 0 : 1); 
+                SendCodeForm sendCode = new SendCodeForm();
+                sendCode.Show();
+            }
+        }
     }
 }

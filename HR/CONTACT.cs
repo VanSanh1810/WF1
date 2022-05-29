@@ -113,8 +113,9 @@ namespace WindowsFormsApp1
 
         public DataTable GetContactWithGroup(string Group_id)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM contact WHERE group_id = @g_id ", dB.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM contact WHERE group_id = @g_id AND user_id = @user", dB.getConnection);
             command.Parameters.Add("@g_id", SqlDbType.VarChar).Value = Group_id;
+            command.Parameters.Add("@user", SqlDbType.VarChar).Value = GlobalsVars.Global_HR_ID;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

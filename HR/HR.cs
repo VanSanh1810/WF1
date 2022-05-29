@@ -104,6 +104,24 @@ namespace WindowsFormsApp1
             }
         }
 
+        public bool EDITRegisterHR_FGP(string username, string pass)
+        {
+            SqlCommand command = new SqlCommand("UPDATE User_HR SET pass = @pass WHERE uname = @uname", dB.getConnection);
+            command.Parameters.Add("@uname", SqlDbType.VarChar).Value = username;
+            command.Parameters.Add("@pass", SqlDbType.VarChar).Value = pass;
+            dB.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                dB.openConnection();
+                return true;
+            }
+            else
+            {
+                dB.openConnection();
+                return false;
+            }
+        }
+
         public bool CheckHRLogin(string username, string pass)
         {
             SqlCommand command = new SqlCommand("SELECT * FROM User_HR WHERE uname = @user AND pass = @pass ", dB.getConnection);

@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.rbtn_student = new System.Windows.Forms.RadioButton();
             this.rbtn_HR = new System.Windows.Forms.RadioButton();
+            this.llb_forgotpass = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // usern_tbx
@@ -143,12 +144,24 @@ namespace WindowsFormsApp1
             this.rbtn_HR.Text = "Human Resourse";
             this.rbtn_HR.UseVisualStyleBackColor = true;
             // 
+            // llb_forgotpass
+            // 
+            this.llb_forgotpass.AutoSize = true;
+            this.llb_forgotpass.Location = new System.Drawing.Point(149, 137);
+            this.llb_forgotpass.Name = "llb_forgotpass";
+            this.llb_forgotpass.Size = new System.Drawing.Size(100, 13);
+            this.llb_forgotpass.TabIndex = 10;
+            this.llb_forgotpass.TabStop = true;
+            this.llb_forgotpass.Text = "Forgot password ??";
+            this.llb_forgotpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_forgotpass_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(341, 307);
+            this.Controls.Add(this.llb_forgotpass);
             this.Controls.Add(this.rbtn_HR);
             this.Controls.Add(this.rbtn_student);
             this.Controls.Add(this.label3);
@@ -178,6 +191,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbtn_student;
         private System.Windows.Forms.RadioButton rbtn_HR;
+        private System.Windows.Forms.LinkLabel llb_forgotpass;
     }
 }
 

@@ -70,6 +70,7 @@ namespace WindowsFormsApp1
                 pictureBoxStu.Image.Save(pic, pictureBoxStu.Image.RawFormat);
                 st.insertStudent(id, fname, lname, bdate, gender, phone, address, pic); //add
                 MessageBox.Show("Success!");
+                this.Close();
             }
         }
 

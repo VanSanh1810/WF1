@@ -237,7 +237,7 @@ namespace WindowsFormsApp1
 
                 DataRow.Cells[3].CellFormat.VerticalAlignment = VerticalAlignment.Middle;
                 Paragraph p4 = DataRow.Cells[3].AddParagraph();
-                Spire.Doc.Fields.TextRange TR4 = p4.AppendText(bdate[r].ToString()); // BirthDay
+                Spire.Doc.Fields.TextRange TR4 = p4.AppendText(Convert.ToDateTime(bdate[r]).ToString("dd/MM/yyyy")); // BirthDay
                 p4.Format.HorizontalAlignment = Spire.Doc.Documents.HorizontalAlignment.Center;
 
                 DataRow.Cells[4].CellFormat.VerticalAlignment = VerticalAlignment.Middle;

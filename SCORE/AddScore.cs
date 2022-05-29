@@ -73,6 +73,8 @@ namespace WindowsFormsApp1
                         else
                         {
                             sc.insertScore(Convert.ToInt32(stuID_tbx.Text.Trim()), Convert.ToInt32(dataRow.Row.ItemArray[0].ToString().Trim()), Convert.ToInt32(score_tbx.Text), desc__tbx.Text);
+                            MessageBox.Show("Success !");
+                            this.Close();
                         }
                     }
                 }
@@ -182,6 +184,8 @@ namespace WindowsFormsApp1
                 {
                     DataRowView dataRow = (DataRowView)comboBox1.SelectedItem;
                     sc.delScore(Convert.ToInt32(stuID_tbx.Text.Trim()), Convert.ToInt32(dataRow.Row.ItemArray[0].ToString().Trim()));
+                    MessageBox.Show("Success !");
+                    this.Close();
                 }
             }
         }
@@ -200,6 +204,43 @@ namespace WindowsFormsApp1
         private void btn_shsco_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = sc.getAllScore();
+        }
+
+        private void edit_btn_Click(object sender, EventArgs e)
+        {
+            if (stuID_tbx.Text == "")
+            {
+                err_IDstu.SetError(stuID_tbx, "Empty !");
+            }
+            else
+            {
+                err_IDstu.Clear();
+                if (!st.checkStu(Convert.ToInt32(stuID_tbx.Text.Trim())))
+                {
+                    err_IDstu.SetError(stuID_tbx, "Exits!");
+                }
+                else
+                {
+                    if (score_tbx.Text == "")
+                    {
+                        err_score.SetError(stuID_tbx, "Empty !");
+                    }
+                    else
+                    {
+                        DataRowView dataRow = (DataRowView)comboBox1.SelectedItem;
+                        err_IDstu.Clear();
+                        if (sc.studentScoreExits(Convert.ToInt32(stuID_tbx.Text), Convert.ToInt32(dataRow.Row.ItemArray[0].ToString().Trim())))
+                        {
+                            MessageBox.Show("Student score already exits");
+                        }
+                        else
+                        {
+                            sc.UpdateScore(Convert.ToInt32(stuID_tbx.Text.Trim()), Convert.ToInt32(dataRow.Row.ItemArray[0].ToString().Trim()), Convert.ToInt32(score_tbx.Text), desc__tbx.Text);
+                            MessageBox.Show("Success !");
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -137,6 +137,26 @@ namespace WindowsFormsApp1
                 return false;
             }
         }
+
+        public bool UpdateScore(int student_id, int course_id, float student_score, string description)
+        {
+            SqlCommand command = new SqlCommand("UPDATE Score SET course_id = @course_id, student_score = @student_score, description = @description WHERE student_id = @student_id,", mydb.getConnection);
+            command.Parameters.Add("@student_id", SqlDbType.Int).Value = student_id;
+            command.Parameters.Add("@course_id", SqlDbType.Int).Value = course_id;
+            command.Parameters.Add("@student_score", SqlDbType.Float).Value = student_score;
+            command.Parameters.Add("@description", SqlDbType.VarChar).Value = description;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.openConnection();
+                return true;
+            }
+            else
+            {
+                mydb.openConnection();
+                return false;
+            }
+        }
         public bool delScore(int student_id, int course_id)
         {
             SqlCommand command = new SqlCommand("DELETE FROM Score WHERE student_id = @student_id AND course_id = @course_id", mydb.getConnection);
